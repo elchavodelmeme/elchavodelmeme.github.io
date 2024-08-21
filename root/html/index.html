@@ -1,0 +1,1293 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>La Casa del Dragón</title>
+        <link rel="icon" type="image/x-icon" href="../assets-app/img/favicon.ico" />
+
+        
+       
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css-app/styles.css" rel="stylesheet" />
+        <script data-ad-client="ca-pub-2726974001486974" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+        <script type="text/javascript">
+    var adfly_id = 24613931;
+    var popunder_frequency_delay = 0;
+    var adfly_google_compliant = false;
+</script>
+<script src="https://cdn.adf.ly/js/display.js"></script>
+
+
+ 
+
+
+        <style type="text/css">
+                #popup {
+        background-color: rgba(0,0,0,0.8);
+        position: fixed;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        margin:0;
+        -webkit-animation:autopopup 2s;
+        -moz-animation:autopopup 2s;
+        animation:autopopup 4s;
+    }
+
+              
+    img:hover { cursor: pointer; } 
+    td:hover { cursor: pointer; } 
+      a:hover { cursor: pointer; } 
+
+      
+
+
+        @-webkit-keyframes autopopup {
+            from {opacity: 0;margin-top:-200px;}
+            to {opacity: 1;}
+        }
+        @-moz-keyframes autopopup {
+            from {opacity: 0;margin-top:-200px;}
+            to {opacity: 1;}
+        }
+        @keyframes autopopup {
+            from {opacity: 0;margin-top:-200px;}
+            to {opacity: 1;}
+        }
+
+    #popup:target {
+        -webkit-transition:all 100s;
+        -moz-transition:all 100s;
+        transition:all 100s;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+
+
+
+.bb, .bb::before, .bb::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.bb {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  background: url("assets-app/img/portada.png") no-repeat 50%/70% rgba(0, 0, 0, 0.1);
+  color: #69ca62;
+  box-shadow: inset 0 0 0 1px rgba(105, 202, 98, 0.5);
+}
+.bb::before, .bb::after {
+  content: '';
+  z-index: -1;
+  margin: -5%;
+  box-shadow: inset 0 0 0 2px;
+  animation: clipMe 8s linear infinite;
+}
+.bb::before {
+  animation-delay: -4s;
+}
+.bb:hover::after, .bb:hover::before {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+@keyframes clipMe {
+  0%, 100% {
+    clip: rect(0px, 220px, 2px, 0px);
+  }
+  25% {
+    clip: rect(0px, 2px, 220px, 0px);
+  }
+  50% {
+    clip: rect(218px, 220px, 220px, 0px);
+  }
+  75% {
+    clip: rect(0px, 220px, 220px, 218px);
+  }
+}
+html,
+body {
+  height: 100%;
+}
+
+h5{
+    font-family: arial;
+    font-size: small;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+        </style>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script>
+
+         setTimeout(function() {
+         document.getElementById("btnLista").style.display = 'block';
+         document.getElementById("txtTemp").style.display = 'block';
+         var t = localStorage.getItem("tselec");
+         if(t == null){
+            document.getElementById("divt1").style.display = 'block';
+            document.getElementById("txtTemp").value = 'Temporada 1';
+            localStorage.setItem("tselec", "t1");
+         }
+         if(t == "t1"){
+            document.getElementById("divt1").style.display = 'block';
+            document.getElementById("txtTemp").value = 'Temporada 1';
+         }
+         if(t == "t2"){
+            document.getElementById("divt2").style.display = 'block';
+            document.getElementById("txtTemp").value = 'Temporada 2';
+         }
+         if(t == "t3"){
+            document.getElementById("divt3").style.display = 'block';
+            document.getElementById("txtTemp").value = 'Temporada 3';
+         }
+         if(t == "t4"){
+            document.getElementById("divt4").style.display = 'block';
+            document.getElementById("txtTemp").value = 'Temporada 4';
+         }
+         if(t == "t5"){
+            document.getElementById("divt5").style.display = 'block';
+            document.getElementById("txtTemp").value = 'Temporada 5';
+         }
+         if(t == "t6"){
+            document.getElementById("divt6").style.display = 'block';
+            document.getElementById("txtTemp").value = 'Temporada 6';
+         }
+         if(t == "t7"){
+            document.getElementById("divt7").style.display = 'block';
+            document.getElementById("txtTemp").value = 'Temporada 7';
+         }
+        }, 100); 
+
+
+        function vert1(){
+            document.getElementById("divt1").style.display = 'block';
+            document.getElementById("divt2").style.display = 'none';
+            document.getElementById("divt3").style.display = 'none';
+            document.getElementById("divt4").style.display = 'none';
+            document.getElementById("divt5").style.display = 'none';
+            document.getElementById("divt6").style.display = 'none';
+            document.getElementById("divt7").style.display = 'none';
+            document.getElementById("txtTemp").value = 'Temporada 1';
+            localStorage.setItem("tselec", "t1");
+        }
+
+        function vert2(){
+            document.getElementById("divt1").style.display = 'none';
+            document.getElementById("divt2").style.display = 'block';
+            document.getElementById("divt3").style.display = 'none';
+            document.getElementById("divt4").style.display = 'none';
+            document.getElementById("divt5").style.display = 'none';
+            document.getElementById("divt6").style.display = 'none';
+            document.getElementById("divt7").style.display = 'none';
+            document.getElementById("txtTemp").value = 'Temporada 2';
+            localStorage.setItem("tselec", "t2");
+        }
+
+        function vert3(){
+            document.getElementById("divt1").style.display = 'none';
+            document.getElementById("divt2").style.display = 'none';
+            document.getElementById("divt3").style.display = 'block';
+            document.getElementById("divt4").style.display = 'none';
+            document.getElementById("divt5").style.display = 'none';
+            document.getElementById("divt6").style.display = 'none';
+            document.getElementById("divt7").style.display = 'none';
+            document.getElementById("txtTemp").value = 'Temporada 3';
+            localStorage.setItem("tselec", "t3");
+        }
+
+         function vert4(){
+            document.getElementById("divt1").style.display = 'none';
+            document.getElementById("divt2").style.display = 'none';
+            document.getElementById("divt3").style.display = 'none';
+            document.getElementById("divt4").style.display = 'block';
+            document.getElementById("divt5").style.display = 'none';
+            document.getElementById("divt6").style.display = 'none';
+            document.getElementById("divt7").style.display = 'none';
+            document.getElementById("txtTemp").value = 'Temporada 4';
+            localStorage.setItem("tselec", "t4");
+        }
+
+        function vert5(){
+            document.getElementById("divt1").style.display = 'none';
+            document.getElementById("divt2").style.display = 'none';
+            document.getElementById("divt3").style.display = 'none';
+            document.getElementById("divt4").style.display = 'none';
+            document.getElementById("divt5").style.display = 'block';
+            document.getElementById("divt6").style.display = 'none';
+            document.getElementById("divt7").style.display = 'none';
+            document.getElementById("txtTemp").value = 'Temporada 5';
+            localStorage.setItem("tselec", "t5");
+        }
+
+        function vert6(){
+            document.getElementById("divt1").style.display = 'none';
+            document.getElementById("divt2").style.display = 'none';
+            document.getElementById("divt3").style.display = 'none';
+            document.getElementById("divt4").style.display = 'none';
+            document.getElementById("divt5").style.display = 'none';
+            document.getElementById("divt6").style.display = 'block';
+            document.getElementById("divt7").style.display = 'none';
+            document.getElementById("txtTemp").value = 'Temporada 6';
+            localStorage.setItem("tselec", "t6");
+        }
+
+        function vert7(){
+            document.getElementById("divt1").style.display = 'none';
+            document.getElementById("divt2").style.display = 'none';
+            document.getElementById("divt3").style.display = 'none';
+            document.getElementById("divt4").style.display = 'none';
+            document.getElementById("divt5").style.display = 'none';
+            document.getElementById("divt6").style.display = 'none';
+            document.getElementById("divt7").style.display = 'block';
+            document.getElementById("txtTemp").value = 'Temporada 7';
+            localStorage.setItem("tselec", "t7");
+        }
+
+        function guardarruta(ruta){
+                localStorage.setItem("rutavideo", ruta);
+                window.location.href = "video.html";
+        }
+
+        function ini(){
+           
+        }
+
+
+        //initialize the goodies
+function initAd(){
+        if ( window.plugins && window.plugins.AdMob ) {
+            var ad_units = {
+                ios : {
+                    banner: 'ca-app-pub-2726974001486974/7676275506',		//PUT ADMOB ADCODE HERE
+                    interstitial: 'ca-app-pub-2726974001486974/7676275506'	//PUT ADMOB ADCODE HERE
+                },
+                android : {
+                    banner: 'ca-app-pub-2726974001486974/7676275506',		//PUT ADMOB ADCODE HERE
+                    interstitial: 'ca-app-pub-2726974001486974/7676275506'	//PUT ADMOB ADCODE HERE
+                }
+            };
+            var admobid = ( /(android)/i.test(navigator.userAgent) ) ? ad_units.android : ad_units.ios;
+
+            window.plugins.AdMob.setOptions( {
+                publisherId: admobid.banner,
+                interstitialAdId: admobid.interstitial,
+                adSize: window.plugins.AdMob.AD_SIZE.SMART_BANNER,	//use SMART_BANNER, BANNER, LARGE_BANNER, IAB_MRECT, IAB_BANNER, IAB_LEADERBOARD
+                bannerAtTop: false, // set to true, to put banner at top
+                overlap: true, // banner will overlap webview 
+                offsetTopBar: false, // set to true to avoid ios7 status bar overlap
+                isTesting: false, // receiving test ad
+                autoShow: false // auto show interstitial ad when loaded
+            });
+
+            registerAdEvents();
+            window.plugins.AdMob.createInterstitialView();	//get the interstitials ready to be shown
+            window.plugins.AdMob.requestInterstitialAd();
+
+        } else {
+            //alert( 'admob plugin not ready' );
+        }
+}
+//functions to allow you to know when ads are shown, etc.
+function registerAdEvents() {
+        document.addEventListener('onReceiveAd', function(){});
+        document.addEventListener('onFailedToReceiveAd', function(data){});
+        document.addEventListener('onPresentAd', function(){});
+        document.addEventListener('onDismissAd', function(){ });
+        document.addEventListener('onLeaveToAd', function(){ });
+        document.addEventListener('onReceiveInterstitialAd', function(){ });
+        document.addEventListener('onPresentInterstitialAd', function(){ });
+        document.addEventListener('onDismissInterstitialAd', function(){
+        	window.plugins.AdMob.createInterstitialView();			//REMOVE THESE 2 LINES IF USING AUTOSHOW
+            window.plugins.AdMob.requestInterstitialAd();			//get the next one ready only after the current one is closed
+        });
+    }
+
+    //display the banner
+function showBannerFunc(){
+	window.plugins.AdMob.createBannerView();
+}
+//display the interstitial
+function showInterstitialFunc(){
+	window.plugins.AdMob.showInterstitialAd();
+}
+        
+     </script>
+
+      
+
+    </head>
+    <body id="page-top" onload="ini()">
+
+      
+
+
+     <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <button id="btnLista" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="display:block; font-weight: bold; font-size: 16px">
+                    Temporadas
+                    <i class="fas fa-bars ml-1"></i>
+                </button>
+                <input id="txtTemp" class="navbar-toggler navbar-toggler-right" style="text-align: center; display: none; font-weight: bold; font-size: 16px;  background-color: transparent; color: #fff"  type="text" readonly value="Mom Craig">
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ml-auto">
+                        <li class="nav-item"><a class="nav-link" data-toggle="collapse" data-target="#navbarResponsive" onclick="vert1()">Temp. 1</a></li>
+             <!--            <li class="nav-item"><a class="nav-link" data-toggle="collapse" data-target="#navbarResponsive" onclick="vert2()">Temp. 2</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="collapse" data-target="#navbarResponsive" onclick="vert3()">Temp. 3</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="collapse" data-target="#navbarResponsive" onclick="vert4()">Temp. 4</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="collapse" data-target="#navbarResponsive" onclick="vert5()">Temp. 5</a></li>
+						<li class="nav-item"><a class="nav-link" data-toggle="collapse" data-target="#navbarResponsive" onclick="vert6()">Temp. 6</a></li>
+						<li class="nav-item"><a class="nav-link" data-toggle="collapse" data-target="#navbarResponsive" onclick="vert7()">Temp. 7</a></li> -->
+
+                       
+
+                        
+                    </ul>
+                   
+                </div>
+               
+            </div><br />
+         <!--    <tr>
+                <td>
+                    <a href="https://join-adf.ly/24613931"><img border="0" src="https://cdn.adf.ly/images/banners/adfly.728x90.1.gif" width="468" height="60" title="AdF.ly - acorta links y gana dinero!" /></a>
+                </td>
+            </tr> -->
+        </nav>
+   
+       
+    
+
+<div id="divt1" style=" display: none; padding-top: 5rem"><center>  
+<table id="tabla" CELLPADDING="10">
+
+   <!--  <tr>
+        <td>
+           Start of adf.ly banner code 
+            <div style="width: 200%; text-align: center; font-family: verdana; font-size: 10px;"><a href="https://join-adf.ly/24613931"><img border="0" src="https://cdn.adf.ly/images/banners/adfly.468x60.1.gif" width="468" height="60" title="AdF.ly - acorta links y gana dinero!" /></a><br /><a href="https://join-adf.ly/24613931">Gana dinero por compartir tus enlaces!</a></div>
+            End of adf.ly banner code 
+        </td>
+    </tr> -->
+
+      <tr onclick="guardarruta('../images/H0DS01E01.avi')">
+        <td style="text-align: right; width: 50%"><img src="../images/0.png"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">Solucion a Posible Error de Reproducción</h5></td>
+    </tr> 
+
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1AByxxfd6uf6tlsdwHKWalGQfbaIWEvnY/preview')">
+        <td style="text-align: right; width: 50%"><img src="../images/1.png"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">01. Los Herederos del Dragón</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1loS-pPJHmeT5ymIR9wBSWRsHWEx_QKdw/preview')">
+        <td style="text-align: right; width: 50%"><img src="../images/2.png"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">02. El Principe Canalla</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1gqSlknEd4bB1cAcwnzWd3nXcX2VvoFgZ/preview')">
+        <td style="text-align: right; width: 50%"><img src="../images/3.png"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">03. El Segundo de su Nombre</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1cL9_nPn0mhdQB00ql1hOv0ggd1OUQEzx/preview')">
+        <td style="text-align: right; width: 50%"><img src="../images/4.png"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">04. El Rey del Mar Angosto</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1E-gpuEbzsLl2CbhaJOlG_c34TzUemUOk/preview')">
+        <td style="text-align: right; width: 50%"><img src="../images/5.png"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">05. Nosotros Alumbramos el Camino</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1YFn2hzCoHdNyc63b4psrJHN3VffeQ6yE/preview')">
+        <td style="text-align: right; width: 50%"><img src="../images/6.png"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">06. La Princesa y la Reina</h5></td>
+    </tr>
+   <tr onclick="guardarruta('')">
+        <td style="text-align: right; width: 50%"><img src="../images/PROXIMAMENTE.png"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">07. Marcaderiva</h5></td>
+    </tr>
+    <tr onclick="guardarruta('')">
+        <td style="text-align: right; width: 50%"><img src="../images/PROXIMAMENTE.png"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">08. El Señor de las Mareas</h5></td>
+    </tr>
+ <!--
+    <tr>
+        <td >
+             Start of adf.ly banner code <div style="width: 170%; text-align: center; font-family: verdana; font-size: 10px;">
+    <a href="https://join-adf.ly/24613931"><img border="0" src="https://cdn.adf.ly/images/banners/adfly.125x125.1.gif" width="125" height="125" title="AdF.ly - acorta links y gana dinero!" /></a>
+    End of adf.ly banner code 
+</td>
+    </tr> -->
+
+     <tr onclick="guardarruta('')">
+        <td style="text-align: right; width: 50%"><img src="../images/PROXIMAMENTE.png"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">09. El Consejo Verde</h5></td>
+    </tr>
+    <tr onclick="guardarruta('')">
+        <td style="text-align: right; width: 50%"><img src="../images/PROXIMAMENTE.png"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">10. La Reina Negra</h5></td>
+    </tr>
+    <!--
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1duQRdRk7QeDpiWZdoeyXnheonN7sDgmc/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1tpMOzx327-xf9ujma-VIRYLGDnEt8zUB"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">11. El Funeral</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/13ZbyT-Dxpfk24fdDpAVe8cWyG0oUy-jI/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1YUcJ5aarSkfVuW20TAMVCRqxG5GBdcel"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">12. El Animador</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1sNfj9RJxcVLTn3JihA8XTNMlgdm7zq_K/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1otxjTdy0QbQ1LY6nglxdO9z4aavs-3cI"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">13. Los Patinadores</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1pI517bEEQ99PymCQyKW1sLCohwhYo4FK/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1XvaTHcaIQZAHGoqvhr-62a_KxA6UoNC4"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">14. Robots Vs. Abejas</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/18I0O-BXzYr3jgAv12JoP-RmlzoBxd8GP/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1ZhBWa2lA5cmsdMP1rnaT85TnmkiQWUvt"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">15. Domingo Lunes</h5></td>
+    </tr>
+-->
+  
+       <!--  <tr>
+            <td >
+                 Start of adf.ly banner code 
+                <div style="width: 200%; text-align: center; font-family: verdana; font-size: 10px;"><a href="https://join-adf.ly/24613931"><img border="0" src="https://cdn.adf.ly/images/banners/adfly.468x60.1.gif" width="468" height="60" title="AdF.ly - acorta links y gana dinero!" /></a><br /><a href="https://join-adf.ly/24613931">Gana dinero por compartir tus enlaces!</a></div>
+                 End of adf.ly banner code 
+            </td>
+        </tr> -->
+
+</table>
+<br><br><br>
+    </center>  
+</div>
+
+
+
+
+<div id="divt2" style=" display: none; padding-top: 5rem"><center>  
+<table id="tabla" CELLPADDING="10">
+
+    <tr>
+        <td>
+            <!-- Start of adf.ly banner code -->
+            <div style="width: 200%; text-align: center; font-family: verdana; font-size: 10px;"><a href="https://join-adf.ly/24613931"><img border="0" src="https://cdn.adf.ly/images/banners/adfly.468x60.1.gif" width="468" height="60" title="AdF.ly - acorta links y gana dinero!" /></a><br /><a href="https://join-adf.ly/24613931">Gana dinero por compartir tus enlaces!</a></div>
+            <!-- End of adf.ly banner code -->
+        </td>
+    </tr>
+
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1xALQN9Ro9JbVCFhhXel61G-kFn2zl4a7/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=14vN3-D0BnYkcfvaY6Owj4SPEUps75yoM" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">01. El Embotellamiento</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1HoW84R3CD_z9bbeyt8YA33uwJlGFgOqv/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=17-ob8A1SsoHzxq_dsV_LM1YhlMvIq4rl" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">02. Un Día de Brujas Retrasado</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1tMtB81LdEe_KePSAPybplZWDix20ypJo/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1ceL-RmVcOK1k4-WhciPnXFd7TPSqTNV0" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">03. El Cumpleaños de Lois</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/19IE0OYI8nJ37VuMbfZX8J3udti7OtQcX/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1_lf-NkupwjIxzivnWOwyVRXJksTH6w9G" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">04. La Invitación a Cenar</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1StczCGDW5_miOCDquLeGZIKa4wn2vEa0/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1O7YGoNqSgqeQFuscIEPVn9TCPfVQrhQ5" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">05. Casino</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1E9nbOqK-FTMmBd54eebQvGqGog1I3at9/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1b316fw183qF2ktRH666lLSQnIprK1lDP" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">06. La Convención</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1_XXbaylW4c-l3COj6yrccGGAJAffPheY/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1mK4miY3KC69-MEKRlJ2pZIPz6IKkSDlU" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">07. El Robo</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1FqotJMUAPjxHtsVVTEAgqo6TjWRPins3/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1mWfv-Veixt4sdu9QWJX9gpmpfxd-08RU" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">08. Terapia</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1rez9l0HJ4OTJRXrH3CQpivUw78KwBfqv/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1UMkL9ojoPCwRc-i5maCJku0h2x6BRTbS" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">09. La Obra de Teatro</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1MwLonIqrjfMx-t1A_fY8tKIC6ivTPxYK/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1unyStrp0Q2hOyJ1Q-gmMlCvfcG4P3k19" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">10. El Golpeador</h5></td>
+    </tr>
+
+    <tr>
+        <td>
+            <!-- Start of adf.ly banner code --><div style="width: 170%; text-align: center; font-family: verdana; font-size: 10px;">
+                <a href="https://join-adf.ly/24613931"><img border="0" src="https://cdn.adf.ly/images/banners/adfly.125x125.1.gif" width="125" height="125" title="AdF.ly - acorta links y gana dinero!" /></a>
+                <!-- End of adf.ly banner code -->
+        </td>
+    </tr>
+
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1OZDiflDdSP2XOIz7plAP7efklx5UhpTX/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1JcCP5D3kAf32a1uXKn0H-oQfhSgKDfM0" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">11. La Vieja Señora Vieja</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1vjAaUaih2avLgLoDw0gHLJ8K8WGbvIpj/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1Bko9saaZvgdJGM18s5hIjvi_h1babOjh" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">12. La Niña Krelboyne</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1kv3rLTOyVxGkdCyFltLP0Uj9BZEg2ubE/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1zELDvCHXubc8CAe3kvBLsvBf1QEDLWQa" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">13. Nuevos Vecinos</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1OFB9-mEgB0QF3CYKLFPINalAdKt91otv/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=10HxQdsDKTRHWWpzYalr4F2mAbo9mzCYk" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">14. Hal Renuncia</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1G2s7UpwhzOeiN_7V2v4W9wes8MG-jyrt/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1vmUYk6FrbicQlsVCnvykj1Jp-F8xS0gn" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">15. Los Abuelos</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1j2CW7RQ4wf4hNw9eTvOxJVnm0LUtZwgX/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=14nao1YZ6nT4ASMDr7EU5FLyvxQCUl3Tm" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">16. La Infracción de Tránsito</h5></td>
+    </tr>
+	 <tr onclick="guardarruta('https://drive.google.com/file/d/19XOKF1cIA4w5ZZSua0XPMK77aE26fmxQ/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1uAafj1rtVzQsGguU2v4p9d3teklqOYaB" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">17. Cirugía</h5></td>
+    </tr>
+	 <tr onclick="guardarruta('https://drive.google.com/file/d/1-4CfaPw3sxKcJ-8UzTWeRsMefgjfoSib/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=14WNgRp5JSgx8F_OUX2QBbq8FhMftoU1l" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">18. Reese Cocina</h5></td>
+    </tr>
+	 <tr onclick="guardarruta('https://drive.google.com/file/d/1W9gNc4ZxJqnOuPxm5cgMCOR2vaRgicXr/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1vEkIis8MHND7LlrgIlyZ9Gg2FGKWQfiV" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">19. Educando a Reese</h5></td>
+    </tr>
+	 <tr onclick="guardarruta('https://drive.google.com/file/d/1J7e3-TuiDrFlifFKNzZkgZ8VzTTRueCR/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1-GK4MzAlp2dkN_NvgHDuIEbt7TCO9Bot" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">20. El Boliche</h5></td>
+    </tr>
+	 <tr onclick="guardarruta('https://drive.google.com/file/d/1ATP3k48HYdrpYRvSL6mgnnzuehThLz-s/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1RSETf_DI1_vD66qHO4JW7BET79hlBjHd" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">21. Malcolm contra Reese</h5></td>
+    </tr>
+	 <tr onclick="guardarruta('https://drive.google.com/file/d/1fMDkbeZkssCw0E2PZ3DTC_WZPzlt7dlO/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1WrVgsKDa4FlCnI0MSF1UwQaVefb41YmN" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">22. La Mini-Moto</h5></td>
+    </tr>
+	 <tr onclick="guardarruta('https://drive.google.com/file/d/1C3tpucNthV7o3VWVV83a5lM6cxEOrRzo/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1nVtt8-06fQW5eXj9JLBKIVrq1s1YaU7Z" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">23. La Feria</h5></td>
+    </tr>
+	 <tr onclick="guardarruta('https://drive.google.com/file/d/1Hi825FrNR3U0Z8-u5zTvmef0ScUW7G4z/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1BRB1pcDju3me4Tz9D6oO3Izl3sDI8ONs" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">24. La Evacuación</h5></td>
+    </tr>
+	 <tr onclick="guardarruta('https://drive.google.com/file/d/1MSn2k_PRfyclBj-xbCl8EmIMZXGT1u_Y/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1H-n3ZVr4vO1poTpHWBtPxLhzCUY3Zmvr" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">25. Recuerdos</h5></td>
+    </tr>
+
+    <tr>
+        <td>
+            <!-- Start of adf.ly banner code -->
+            <div style="width: 200%; text-align: center; font-family: verdana; font-size: 10px;"><a href="https://join-adf.ly/24613931"><img border="0" src="https://cdn.adf.ly/images/banners/adfly.468x60.1.gif" width="468" height="60" title="AdF.ly - acorta links y gana dinero!" /></a><br /><a href="https://join-adf.ly/24613931">Gana dinero por compartir tus enlaces!</a></div>
+            <!-- End of adf.ly banner code -->
+        </td>
+    </tr>
+
+</table>
+<br><br><br>
+    </center>  
+</div>
+
+
+
+
+<div id="divt3" style=" display: none; padding-top: 5rem"><center>  
+<table id="tabla" CELLPADDING="10">
+
+    <tr>
+        <td>
+            <!-- Start of adf.ly banner code -->
+            <div style="width: 200%; text-align: center; font-family: verdana; font-size: 10px;"><a href="https://join-adf.ly/24613931"><img border="0" src="https://cdn.adf.ly/images/banners/adfly.468x60.1.gif" width="468" height="60" title="AdF.ly - acorta links y gana dinero!" /></a><br /><a href="https://join-adf.ly/24613931">Gana dinero por compartir tus enlaces!</a></div>
+            <!-- End of adf.ly banner code -->
+        </td>
+    </tr>
+
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1mC9H7g-HofyiX3juINF6iau0IY65qH1J/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=11m5_aqwF9JS-_zyVOaeH1pzo2oX_5wXP" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">01. Vacaciones</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1MathBGTg9ZD7dYOm7VjpCJLTaOTAwHko/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1QB4AblVFMohPFgrsJwNFibxwOxtQ03X5" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">02. Emancipación</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1X4CqnKVgk025TYy3ffkkhQES8iCeBDC9/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1QB9g5LsdXlpp-w0zn-JyZ1tgaGa8TmVq" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">03. El Club de Lectura</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1ufPgCWpMp--RcHvH7kYxMWxfA-Mi2LIe/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1HcqVENLbvv8ljOAeYRCUp-YwAzPnLW4a" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">04. La Novia de Malcolm</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1L1sMEYUm6Rnv4N5q1v1g7qHoJ5PvLJ-X/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1Hm676ZRyNYSIfeY-XBdJ05lo-tI9mjCx" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">05. Caridad</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1cs31kKMvZhcEbWZ4-0nfIwZ8_3q78y8I/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1vN5iaxA9Oq8hyGjjstDlLOo8oAj7M7Zs" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">06. Susto de Muerte</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1izj-soLzu-B8W1ovreA06iOZLkoXM1v_/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1q1fQJddB6dzAHsxqwfstHfJ2dsVzia0F" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">07. Navidad</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1EdmJXBfAeXnk8WON5bvA-fsBp11QwmU7/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1UPrbwDCUMgNDtQxE_JG9Wiyn7k2dxNZx" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">08. Pokér</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1DlRPV6w4eSsMZeIODI_AdaR1oC2hOIfd/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1VUxNQDtm6JjFTrK19jUqTR3OWR-EZ56u" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">09. El Empleo de Reese</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1irXLLtcZyzjt-9Y0TzWn8p890iVtaSk-/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1_vYEyh43LOr9B0inMk7_7sjqOwMGu5SE" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">10. El Maquillaje de Lois</h5></td>
+    </tr>
+
+    <tr>
+        <td>
+            <!-- Start of adf.ly banner code --><div style="width: 170%; text-align: center; font-family: verdana; font-size: 10px;">
+                <a href="https://join-adf.ly/24613931"><img border="0" src="https://cdn.adf.ly/images/banners/adfly.125x125.1.gif" width="125" height="125" title="AdF.ly - acorta links y gana dinero!" /></a>
+                <!-- End of adf.ly banner code -->
+        </td>
+    </tr>
+
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1DQp365MVfM9PGmb6jYEFqQjpyEOLtMTR/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1e_3LG8koD4G5pz433Xj4jbgn7ucUQ98C" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">11. El Día de Campo, 1ra Parte</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1_ZxNDx4WEtpKccVgf0AFUndj_wpfrhlF/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1RfN4M8wmrHiLP_8GmwJoCYcaVORcy0Gu" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">12. El Día de Campo, 2da Parte</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/110fZl0Nd9Us4_zlJ18-Yr8HOUM-8VrNb/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1c64Kl7Cxld6SRfb8haFCs9AQDaj8NG9Q" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">13. Reese al Volante</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1XJhca3za5V-OfDXGtlSuMVb2YmssipzQ/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1DhYkJz0MrjGVHE6u6lbxZJ3UtSP6B4PC" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">14. El Regreso de Cynthia</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1f50LEv5EnMbXkHHGi66UunuSGyOAVQDv/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1Zrd60b5YKa7Q5gcb3jiM61xzSyuRZKNH" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">15. El Cumpleaños de Hal<</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1Inop7OusWHhUL-v-OYgO6ajSkjkrTVw0/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1aZovOabeUD7GuhlS0x7XE-DFgUQdPUOK" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">16. Hal Entrenador</h5></td>
+    </tr>
+	<tr onclick="guardarruta('https://drive.google.com/file/d/12HqMgMGko17lX7XPKLbrVtgmOF42K-4_/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1iQS8WdV2h2xskPuw8Suk1XyoYf0_u0RW" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">17. Dewey y su Perro</h5></td>
+    </tr>
+	<tr onclick="guardarruta('https://drive.google.com/file/d/14wqnMTUQr4F_TM15u4gJyr17FDT-MUyV/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1oKQ3dVnpio7PMk6hvriILpGEnFjXpjjH" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">18. Póker 2</h5></td>
+    </tr>
+	<tr onclick="guardarruta('https://drive.google.com/file/d/1EOWyA8ZKsvi9w1NBfh52Lpmb1b06IYOZ/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1aPhTGNEclkWoH1XGF2cv-YYVlyxkLc6I" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">19. Escenas Pasadas</h5></td>
+    </tr>
+	<tr onclick="guardarruta('https://drive.google.com/file/d/1TUV8w1mb6gJljqAuiP-rYTuyWVkhGt3B/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1-eMyXyY2tEGjeN1gc_l4d6D1veLhIRBp" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">20. El Jurado</h5></td>
+    </tr>
+	<tr onclick="guardarruta('https://drive.google.com/file/d/1PamzyJ9ZM3YHO3Xp4CzRReLBN8cBCXqA/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1tZItCSFRtCjgGbDGbZ0t6YP3yYGVRhFo" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">21. Pandillas</h5></td>
+    </tr>
+	<tr onclick="guardarruta('https://drive.google.com/file/d/1pgRoRSFSDVvTJks3ovkpdK1h-cQO4rDl/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1V0TjSJIfmKarG3dDQ-tl7UsObmOSVs_4" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">22. El Mono</h5></td>
+    </tr>
+
+    <tr>
+        <td>
+            <!-- Start of adf.ly banner code -->
+            <div style="width: 200%; text-align: center; font-family: verdana; font-size: 10px;"><a href="https://join-adf.ly/24613931"><img border="0" src="https://cdn.adf.ly/images/banners/adfly.468x60.1.gif" width="468" height="60" title="AdF.ly - acorta links y gana dinero!" /></a><br /><a href="https://join-adf.ly/24613931">Gana dinero por compartir tus enlaces!</a></div>
+            <!-- End of adf.ly banner code -->
+        </td>
+    </tr>
+
+</table>
+<br><br><br>
+    </center>  
+</div>
+
+
+
+
+<div id="divt4" style=" display: none; padding-top: 5rem"><center>  
+<table id="tabla" CELLPADDING="10">
+
+    <tr>
+        <td>
+            <!-- Start of adf.ly banner code -->
+            <div style="width: 200%; text-align: center; font-family: verdana; font-size: 10px;"><a href="https://join-adf.ly/24613931"><img border="0" src="https://cdn.adf.ly/images/banners/adfly.468x60.1.gif" width="468" height="60" title="AdF.ly - acorta links y gana dinero!" /></a><br /><a href="https://join-adf.ly/24613931">Gana dinero por compartir tus enlaces!</a></div>
+            <!-- End of adf.ly banner code -->
+        </td>
+    </tr>
+
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1P24Gx2RbT80s_73m_MabcS1j2AQFcCTx/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1WZd7FXo_qpRW6Vi_hDho00fD-bfcwrvh" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">01. El Zoológico</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1Ye6pipKrMyzl1O4_zMpG_4hiJNsXitAM/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=19JK4fEw2sBUuF-foC0tQfYjO9ZMq6mL6" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">02. Maratón de la Humildad</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1vND55Yj-ODfoWB4ZOiIQxwkQTErVptLF/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=186hHSUKcRcoCR11hL9Ocj4wO6cB9C9KV" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">03. La Reunión Familiar</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1aY0-X533Zl0ftw_EzBK5VOzhKQekHbmP/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1K4bZXt3N8p02YfZvIHGwTgv3hl0US3ok" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">04. La Niña Tonta</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/16zT16spN90IGvLK1leZfq0vaNxbTU1O2/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1GUHelFJKxHq0TsBnddGRoR0UHFdMIRe-" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">05. Hacia Adelante y Hacia Atrás</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/100C6Q6KIgGYEJC8GKNOyNwyWTp3Ab3l4/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=13NeN0lPzWORq-a616ohORqiYJncGvyef" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">06. La Novia Prohibida</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1KmIQPQXZ7sLaenYBE-96lyzSSLaylwOY/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1C9IWmxIJwJHE4A8x5ggNwdlY4YWLiLsT" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">07. Malcolm se Queda Callado</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1ku95YfA2ZJJQ1qNdIBzc_lJ-30493o3P/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1_LtT0EfpMuykE1rY71Bh9HkpJf0Evnia" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">08. Los Chicos al Rancho</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1jIaDRJ_61oSBthCxxANjDHY7_Au-ATT4/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1H7L_eaaW3bXCgUbwZMDkmqSJQCVKfY0O" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">09. La Abuela Demanda</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1bGO62V15ilI4xnwcX8CPWUyftvqjsvJu/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1vVb-ld77sfoNkE_Ggh5bisddKJHRejC7" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">10. Si los Niños Fueran Niñas</h5></td>
+    </tr>
+
+    <tr>
+        <td>
+            <!-- Start of adf.ly banner code --><div style="width: 170%; text-align: center; font-family: verdana; font-size: 10px;">
+                <a href="https://join-adf.ly/24613931"><img border="0" src="https://cdn.adf.ly/images/banners/adfly.125x125.1.gif" width="125" height="125" title="AdF.ly - acorta links y gana dinero!" /></a>
+                <!-- End of adf.ly banner code -->
+        </td>
+    </tr>
+
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1RhKDe7w4dDp4ciDxZWhIpi_Qrz0iKvHv/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1uXqlSGxg66wGsp5zAuc2J3Dtlrs8qt_J" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">11. El Largo Camino</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1gPzUPOPd_IWCtzKNdvNMebwNyKSk-suh/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1VJrx8OQImVtEVEglgRAimhR4XDVqHVK6" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">12. Echado de Casa</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1kcwQGbcCuFke7jEIBDwptDeaRgo1-fPC/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1lLB5bqEgY6cmPjDXpDqskPubGQ2-wAD_" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">13. La Tienda de Electrónica</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1VTK-CgV_GNhZCFdpBcSOXzyRSMYuvS9r/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1XQsAEpSrxHBpqpwYFd7W_qIX65o5hxRT" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">14. El Amigo de Hal</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1UciCAR_KwLxIH4xBisaM0ZPAgTvyscM8/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1HFGG53-Az-AExjTZovj9Dqx6jn8MiR5K" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">15. La Venta de Cochera</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/19mvCN6GeOo45rNJHIh5-VmzGCPsKYmVh/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1BlFhMMUbwnWYkKBIsxfpD0639XtF5ShX" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">16. El Octatlón Académico</h5></td>
+    </tr>
+	  <tr onclick="guardarruta('https://drive.google.com/file/d/1mJqsaagWe0G8EaJjnFWR6ytUJ5fUJx_f/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1FB5RWRwW9tzQTAOzn3tgtrBBFs4wt7H6" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">17. Escenas Pasadas 2</h5></td>
+    </tr>
+	  <tr onclick="guardarruta('https://drive.google.com/file/d/1yjJIzymKarBsrEmYMXXytBEqcO96MSy5/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1DoW3stlFJGvWn7HVl74E6818VHHPLPjD" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">18. La Fiesta de Reese</h5></td>
+    </tr>
+	  <tr onclick="guardarruta('https://drive.google.com/file/d/1PzHfESAQ1VsWx6Nm4m3H5W0sF4KywDcB/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1KZdmIpWqEWRh9avbREYY91gGrPPMqQ7T" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">19. El Malcolm del Futuro</h5></td>
+    </tr>
+	  <tr onclick="guardarruta('https://drive.google.com/file/d/1zi99AMpvRk_w5TofIiEe0m12fQqkSUoB/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1LLeHcI6zrfy4RY_8SkkmHg5DctfjWui-" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">20. El Bebé (1ª Parte)</h5></td>
+    </tr>
+	  <tr onclick="guardarruta('https://drive.google.com/file/d/1PYY6m_4IT3xGkyMabz-6Y6k99ucd-KTZ/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=13ktaeyyDBHkfjvItKAktvBLi5xsNWV0Y" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">21. El Bebé (2ª Parte)</h5></td>
+    </tr>
+	  <tr onclick="guardarruta('https://drive.google.com/file/d/1jSs4EDORhfjgUGNIrChlrvP2koAHD9Vd/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1m6n5sseg9m8pONX6hAUHae_vXbLWx8we" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">22. La Guardería</h5></td>
+    </tr>
+
+    <tr>
+        <td>
+            <!-- Start of adf.ly banner code -->
+            <div style="width: 200%; text-align: center; font-family: verdana; font-size: 10px;"><a href="https://join-adf.ly/24613931"><img border="0" src="https://cdn.adf.ly/images/banners/adfly.468x60.1.gif" width="468" height="60" title="AdF.ly - acorta links y gana dinero!" /></a><br /><a href="https://join-adf.ly/24613931">Gana dinero por compartir tus enlaces!</a></div>
+            <!-- End of adf.ly banner code -->
+        </td>
+    </tr>
+
+</table>
+<br><br><br>
+    </center>  
+</div>
+
+
+
+
+<div id="divt5" style=" display: none; padding-top: 5rem"><center>  
+<table id="tabla" CELLPADDING="10">
+
+    <tr>
+        <td>
+            <!-- Start of adf.ly banner code -->
+            <div style="width: 200%; text-align: center; font-family: verdana; font-size: 10px;"><a href="https://join-adf.ly/24613931"><img border="0" src="https://cdn.adf.ly/images/banners/adfly.468x60.1.gif" width="468" height="60" title="AdF.ly - acorta links y gana dinero!" /></a><br /><a href="https://join-adf.ly/24613931">Gana dinero por compartir tus enlaces!</a></div>
+            <!-- End of adf.ly banner code -->
+        </td>
+    </tr>
+
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1X6wD7ghz4cZwABZNnwV6qufRhf3o8Bt7/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=17hb2VqArXMKEWHwGhPybcnIOKwjDnRKN" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">01. Las Vegas</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1DEzq3OasrZx3QPyt-UkX-S4gZNnrnOVO/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=17zGFJYbtLaErrgNH9uLWys1gOyscXBPH" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">02. Cuidando al Bebé</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1C45tIKYB8YtWVN3VrkL3axHvaC9T3Ayy/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1B5wRIbGqqP8k-vNXSnOdOS-k3_Ampmw7" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">03. Adiós a Kitty</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1kq83TiItXT-mK9uQVX5HnXBn4nEC28mE/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1YZPPhg1ocsuK2Gz-PIZ0mqiBeLXf6h-E" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">04. Día de Acción de Gracias</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1DJUWEJdt5E9hnTOlTK_eiVlOeA71gbgE/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1WYEbu5a7y9a4dEy-hmBH01WN183s_eZZ" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">05. Malcolm Graba a Reese</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1Lw1wQIlJEyx7N-PTVxAZA7Cwcm_M8LIb/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=13H0MnNlZLON8o92YxBRS6iw0GYMBRQ_r" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">06. El Empleo de Malcolm</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/16VfB2B-zDr-A3K4LcedckXBY-O6f-tEz/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1IFszf7fHwiZ2A8DfFwkmi57GO0Bq7vku" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">07. Árboles de Navidad</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1oxUfotEg6BEqL3ZNzX_pnBjJozNBpnZf/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1ITuIVxawnUXrIyWNWfzXs0vGkHw8inWW" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">08. La Fiesta del Vecindario</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1WUb6YYUOErBLStMs1R_J1g3hcDHxPaGF/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1aSbGync-kgRVo4XLIPliMNIbtaMM3VbH" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">09. La Revista Obscena</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1NMl0tWRwJZ14FwLeeQmFkPUVW2fqMQ50/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1HiG_-foTeLGxXPaxJ_jsqQUlhadQDSPL" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">10. La Tina de Hidromasaje</h5></td>
+    </tr>
+
+    <tr>
+        <td>
+            <!-- Start of adf.ly banner code --><div style="width: 170%; text-align: center; font-family: verdana; font-size: 10px;">
+                <a href="https://join-adf.ly/24613931"><img border="0" src="https://cdn.adf.ly/images/banners/adfly.125x125.1.gif" width="125" height="125" title="AdF.ly - acorta links y gana dinero!" /></a>
+                <!-- End of adf.ly banner code -->
+        </td>
+    </tr>
+
+    <tr onclick="guardarruta('https://drive.google.com/file/d/19m9dtTbbHeFlaZIhsw7pMrBDmyfQPInD/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=17LtiDPDIub-FsTtB0R-K2RTv9nTM-Lff" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">11. El Novio de Ida</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1W4GuygabXVVb4ftTi9lTRBudLzbnmfNd/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1xkBdAofVYSiypf2tMxp1_rH1_XlMT4Ox" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">12. Softboll</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1pDzLij0Ljc2rllAxfFgzYEN8kGXW28uV/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1LNZdqxjh-l-04xq_5J0PFBUmG25hqWgK" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">13. La Hermana de Lois</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/19w6A-DR96htAxC0LBvYaFCstYz9Ps2Og/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1oJu6twiM7cm_1xg9xxpZxI_TvF2VQ-6q" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">14. Malcolm Sale con una Familia</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1H0D2Lyi0PzU0Smg3LokTcs17N01o91kl/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1-8nWj5XkUTiJF4pnZyBGWhlmDnUS1P7L" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">15. El Departamento de Reese</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/10MIQ_4RgS-px0aLnMFbbN7BXH0Fnyj_F/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=12XOsPbEKVa0kNineTy86h2Rfn12eWb3P" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">16. Malcolm Visita la Universidad</h5></td>
+    </tr>
+	<tr onclick="guardarruta('https://drive.google.com/file/d/1sV6CLTGVxJ3LMNIj2Pdv7Lm10QAzUzeO/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1zWMjYm13-2eIAIo3996LS4wU47j5Cj2c" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">17. Polly la del Medio</h5></td>
+    </tr>
+	<tr onclick="guardarruta('https://drive.google.com/file/d/1qbIhMmYfFK8bvWrGsQ_4dud9bp9JImVH/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1CeftjBLfxzbuo_DThGLuZztEwh7dX0Rw" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">18. El Grupo Especial de Dewey</h5></td>
+    </tr>
+	<tr onclick="guardarruta('https://drive.google.com/file/d/1aWh0kqV0mW-eTtUWMKsatgT9BTEqkpB6/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1txQG9GSPtmmkC60jbmi0e56r1wmFVPZI" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">19. El Experimento</h5></td>
+    </tr>
+	<tr onclick="guardarruta('https://drive.google.com/file/d/11cnfuIGa4eCGYxj4SFTooJ_1VjFUFtwo/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1GbWrstfRDi5iiQhXxhEfW7nzYxuS6abS" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">20. La Otra Familia de Victor</h5></td>
+    </tr>
+	<tr onclick="guardarruta('https://drive.google.com/file/d/1ggxbKMuYgXzRtZSZpYEAQnvT_e5SZ2Xf/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1fsEz2aQGqNlbhcWFEANC56wlH310F0ZR" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">21. Reese se enlista en el Ejército, 1era Parte</h5></td>
+    </tr>
+	<tr onclick="guardarruta('https://drive.google.com/file/d/1EoOobHekGUW8ne4DMvHq1ZR1RGYGjPLH/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1D0SkZG1sJ12R7BTmsSix7_wqDecmeGMG" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">22. Reese se enlista en el Ejército, 2da Parte</h5></td>
+    </tr>
+
+    <tr>
+        <td>
+            <!-- Start of adf.ly banner code -->
+            <div style="width: 200%; text-align: center; font-family: verdana; font-size: 10px;"><a href="https://join-adf.ly/24613931"><img border="0" src="https://cdn.adf.ly/images/banners/adfly.468x60.1.gif" width="468" height="60" title="AdF.ly - acorta links y gana dinero!" /></a><br /><a href="https://join-adf.ly/24613931">Gana dinero por compartir tus enlaces!</a></div>
+            <!-- End of adf.ly banner code -->
+        </td>
+    </tr>
+
+</table>
+<br><br><br>
+    </center>  
+</div>
+
+
+
+
+<div id="divt6" style=" display: none; padding-top: 5rem"><center>  
+<table id="tabla" CELLPADDING="10">
+
+    <tr>
+        <td>
+            <!-- Start of adf.ly banner code -->
+            <div style="width: 200%; text-align: center; font-family: verdana; font-size: 10px;"><a href="https://join-adf.ly/24613931"><img border="0" src="https://cdn.adf.ly/images/banners/adfly.468x60.1.gif" width="468" height="60" title="AdF.ly - acorta links y gana dinero!" /></a><br /><a href="https://join-adf.ly/24613931">Gana dinero por compartir tus enlaces!</a></div>
+            <!-- End of adf.ly banner code -->
+        </td>
+    </tr>
+
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1KMbMb1iC58GVLbXePJZrX2WVhYync8BL/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=11Fpt7Wed_06rp6Zu5Xn7UKIWHmtc8ctp" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">01. Reese Vuelve a Casa</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1tpTWOUi4bNOWyHL5_2cefjkfdWQWeggd/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1pAI5PESdNHEcxLo3AErlStfuWo48CKzZ" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">02. La Fuga de la Clase Especial</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1pjUrQsE5gXIq7v_I70EKLMzyGWSzqIq9/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1vdnYfbbvLEGfCzb66w3iXXvvVVyVsKNd" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">03. El Muñeco de Cartón</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1pd8LHfvm6U-kn-LtSGVIj357maueh3Ai/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1a6I99XUzORxtn8wiiURWpo97LyecUfn9" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">04. Pearl Harbor</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1ATQt4ZYqABF7Ja5n2TZKoWn4T5TmYlCW/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1p_fblHeTm21Lfq5kPj9RtDNtg8IjJZ0k" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">05. Kitty Regresa</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1-ZQhIDfy5RvFsf6c7RDuvgkxHhSB1vok/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1grrBIkUOKxd5XzzuhC9E2dhUDG4lxRpO" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">06. El Regalo de Navidad de Hal</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1nEhJ6C6gSNDEtZIvjN3ogI3t8Ad_1KP6/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1DK_tc6U0B4N7B7WXm-U3IuQhMLTxTPhh" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">07. Hal Sonámbulo</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1B7DBlCBQuQQPGexRMCUnEDJ7cyUdKFpi/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1_4Fyyoo_Eb8LTjpTq1qoMVRFN09aWiAV" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">08. Lois vs Jamie</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/13Ash4j81RgHVcFMk_Qes8Ktfu5DRpl_v/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1Z8qPKzsTd9Ew9vVOPVWkHDzmvWrEpGHp" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">09. El Auto de Malcolm</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1-2of4GzcxUOf41nIluUQsLk9XFIIzAzw/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1RpXV_RacYL_s1nnoTIz7xYeeGJ5J2zHy" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">10. El Anuncio</h5></td>
+    </tr>
+
+    <tr>
+        <td>
+            <!-- Start of adf.ly banner code --><div style="width: 170%; text-align: center; font-family: verdana; font-size: 10px;">
+                <a href="https://join-adf.ly/24613931"><img border="0" src="https://cdn.adf.ly/images/banners/adfly.125x125.1.gif" width="125" height="125" title="AdF.ly - acorta links y gana dinero!" /></a>
+                <!-- End of adf.ly banner code -->
+        </td>
+    </tr>
+
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1vO_naTn4NKt_JFxQhaiwxrJPt4VqT-j3/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1tjq8HbJFkzNOzJF3zlhtpkh0RhbWJG4k" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">11. Ópera</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/12ArejFEx0nj4l-qH8dkFWNRK01IAak1i/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1X5QS4yEvTTHgd3NbWaKIrWZHFSz0O6iA" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">12. El Testamento</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1iRJv4BTnoeAsITPEOGzTeF1k5FUzEWvK/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1W5kv0yq4ogd3woP3DJJ_HftSx5FlFiks" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">13. La Cabaña Tiki</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1tdwKYUC2ao4KJpvJr2CwBVknjfFZ7WR4/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1bcxKLc0tH4rUc_pj7fGd7PhTvjAH3BEh" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">14. Ida Pierde una Pierna</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1D6WgF128Bwgz8RPB1NrGkUW6DKMVrqXn/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1vuTHIqmc8nQLQ2Ucw1jS0P0jgczTbV5q" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">15. Chad se Queda a Dormir</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1Qz8OaSBV_lFUW2070UMuoz9xno6fokS5/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=17fby7NMhwUnab2bDwwN2HuTb-AIHS74s" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">16. Motocicletas Prohibidas</h5></td>
+    </tr>
+	<tr onclick="guardarruta('https://drive.google.com/file/d/1sNJOxG1cFMjyGt9s5YbDyD4jQb-7hFyu/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1XB4rZgnQ7IM1UpvOA1FmsHyo_mWzmD-w" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">17. Mariposas</h5></td>
+    </tr>
+	<tr onclick="guardarruta('https://drive.google.com/file/d/1B-XQpT-wuBy7YlT39r3-1kCRQtT5MVIc/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1Db99wccbovSreMuiL-kDltOqNItX8ds8" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">18. El Baile de Ida</h5></td>
+    </tr>
+	<tr onclick="guardarruta('https://drive.google.com/file/d/1qSYnaYetWMRLFwGsLE2XxVjrI7sgyepk/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1mmVv8CFcE4V8sm3qgptjYAglb0FQaBIN" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">19. Orador Motivador</h5></td>
+    </tr>
+	<tr onclick="guardarruta('https://drive.google.com/file/d/1OviCJsYLU-6ES8xFrXNH0G9ErweYRoaL/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1H6uc6bJdBoI8HDXnKk-3FeH0UBm2x1am" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">20. Zancos</h5></td>
+    </tr>
+	<tr onclick="guardarruta('https://drive.google.com/file/d/1xwEe0hrsThaW3s3wyizJWML5a2t7tVk9/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1_w6-tIEO4F7__CbZokT-I_epzbMyWe65" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">21. Los Especiales Toman un Rehén</h5></td>
+    </tr>
+	<tr onclick="guardarruta('https://drive.google.com/file/d/1uS4wcvawJCHAOfEkD3WqVtqxCDSL0qlm/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1JiLXXSpiwlM0X_f1N4rBYbaPhL2tSln8" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">22. Señora Tres Condados</h5></td>
+    </tr>
+
+    <tr>
+        <td>
+            <!-- Start of adf.ly banner code -->
+            <div style="width: 200%; text-align: center; font-family: verdana; font-size: 10px;"><a href="https://join-adf.ly/24613931"><img border="0" src="https://cdn.adf.ly/images/banners/adfly.468x60.1.gif" width="468" height="60" title="AdF.ly - acorta links y gana dinero!" /></a><br /><a href="https://join-adf.ly/24613931">Gana dinero por compartir tus enlaces!</a></div>
+            <!-- End of adf.ly banner code -->
+        </td>
+    </tr>
+
+</table>
+<br><br><br>
+    </center>  
+</div>
+
+
+
+
+<div id="divt7" style=" display: none; padding-top: 5rem"><center>  
+<table id="tabla" CELLPADDING="10">
+
+    <tr>
+        <td>
+            <!-- Start of adf.ly banner code -->
+            <div style="width: 200%; text-align: center; font-family: verdana; font-size: 10px;"><a href="https://join-adf.ly/24613931"><img border="0" src="https://cdn.adf.ly/images/banners/adfly.468x60.1.gif" width="468" height="60" title="AdF.ly - acorta links y gana dinero!" /></a><br /><a href="https://join-adf.ly/24613931">Gana dinero por compartir tus enlaces!</a></div>
+            <!-- End of adf.ly banner code -->
+        </td>
+    </tr>
+
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1-7LiZVf7yh5BL1-ZJTL0BLsLnLBsUyop/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1xi8cJJ2qVjwg0dA2pgbAkAjAy9TMVmRY" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">01. El Hombre en Llamas</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1foTec5OMU8w-I8gtluFMtVKUI_LogbYu/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1EU6NKg05oAll_L2duAiH33pwrcrEPr-A" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">02. Seguro Médico</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1RduJz5YqvvhF2eBkrCjQ0CmWFvwKVedv/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1nmYvnUK51-Hx4BI4Io00DJvdZiLDAZBp" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">03. Reese vs. Stevie</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1Dj9KeogAGbrflcw947x5W5Btv0vKahLV/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1XyoMGVvLO-OGPNpYbDyzFsHGbhypc7lN" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">04. Noche de Brujas</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/13i9jNTAjHvA-sWcMAz3wENCMEvHBaKpb/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1sR9285Ydb6DfxR0j-sXpRUdhifIoGcMv" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">05. Jessica se Queda en la Casa</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/16JEpQy5E4hUFR28WLni4uh0DgC9d76JY/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1if3ltdmQi8boEBy3G9SQQAarT0VTM-ey" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">06. El Novio Secreto</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1bdhMw0Htup-T1BrOiPe5YalhZCvcHY7j/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1z5K3DgUD0surefuQsi9AdP-lxpBQPU39" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">07. Apagón</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1KSGqeExDgsm3wGkEfVivHWaUGeGKPdIZ/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1sl2M1PSuEgIl6slAJ9P_GeDqkTgGyRXb" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">08. La Amiga del Ejército</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1Go31WmapX14yYZy4_CoJqPgzujFhtZl-/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1P-2H6ijm3QU-aFV96EguicnVBDARkWjP" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">09. Malcolm Defiende a Reese</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1rexPO4roPrfJAP3Z_QsQU4AwNr3mOmPq/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=18JcXRpirAyfDqmyPHhfLRSOJYu6BFf_i" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">10. El Dinero de Malcolm</h5></td>
+    </tr>
+
+    <tr>
+        <td>
+            <!-- Start of adf.ly banner code --><div style="width: 170%; text-align: center; font-family: verdana; font-size: 10px;">
+                <a href="https://join-adf.ly/24613931"><img border="0" src="https://cdn.adf.ly/images/banners/adfly.125x125.1.gif" width="125" height="125" title="AdF.ly - acorta links y gana dinero!" /></a>
+                <!-- End of adf.ly banner code -->
+        </td>
+    </tr>
+
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1MwJZt6OXnrCwijDLlc8AObsVk-dKZI91/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1MoJsTozJf_mueKb1x7fxmGhfygX38SX3" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">11. La Novia de Ida</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1xJZaTjysiF4J_XMjQAH9ypWviM_onrjz/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=12tkc-l6_WpvNIGII-6iZD6Uc0_Z0ozqA" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">12. Reclutadores Universitarios</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/17sLC5iJgAkoz10BqilpkUHCtXwh3SLIa/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1-y9Gh861yuboIP_sjIhITn3F788a3Dhr" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">13. Mononucleosis</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1tnOGD7boBgW94d9b6DRcOVMNaBsoKCRN/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1lgR2Or0Ja0jkUIrQW6LA0I29FpxEnO4R" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">14. Hal de Luto</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1fhZWnGKCxFhqxb2XWccqaqm6hCfVTtNH/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1WTxo-ccetY3WnEqXqEIzjMyrKARIXOQ6" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">15. Alcohólicos Anónimos</h5></td>
+    </tr>
+    <tr onclick="guardarruta('https://drive.google.com/file/d/1zrMGE86B-80SZcxl9o3f4f7VKlB_9vqU/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=13WRhmkmchXE2-dvZ6j-VK2_5rrdnlTAb" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">16. Lois Contraataca</h5></td>
+    </tr>
+	<tr onclick="guardarruta('https://drive.google.com/file/d/10ljzI_UeI5IhM5TypfBdUZTWXh_5GXh2/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1_Tv-v-ixKYf4BTsIUj2tgsJuzqTGlu9R" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">17. El dentista de Hal</h5></td>
+    </tr>
+	<tr onclick="guardarruta('https://drive.google.com/file/d/1f2f7R3PVTtku48uZlx1HgIeICCdXRhp0/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1pI8A63YXWH2V_Bs3lH8XvAhkNEbHjwCF" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">18. El Refugio Antibombas</h5></td>
+    </tr>
+	<tr onclick="guardarruta('https://drive.google.com/file/d/1xr_nQsT-NvX9hmpHFdNNplWCyvZwlpOS/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1lBN-tgs_BmPOW7_dAsrUpD06k-qIggPs" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">19. Stevie está en el Hospital</h5></td>
+    </tr>
+	<tr onclick="guardarruta('https://drive.google.com/file/d/1hLK8v_TUDHoJ_GYKS6UbvPneA_E8tN4x/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1PpT2n9y0lgyUdw5dqlNW-2xRON6dVKyz" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">20. El Juicio del Ganado</h5></td>
+    </tr>
+	<tr onclick="guardarruta('https://drive.google.com/file/d/12rjvHwOdsr21Sd212kEQIJUGgykWfbul/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=16Yad5Zc9qPgGMFSZEdGXRQR-IDmU41FD" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">21. Parodia</h5></td>
+    </tr>
+	<tr onclick="guardarruta('https://drive.google.com/file/d/16MS7X-BYgqNYV1_jtYKzQdVcRPgcxJge/preview')">
+        <td style="text-align: right; width: 50%"><img src="http://drive.google.com/uc?export=view&id=1XicV8cOdMJADPo_Y512aSQR7gBSB_bEQ" width="142" height="80"></td>
+        <td style="text-align: left; width: 50%""><h5 style="color:white">22. Graduación</h5></td>
+    </tr>
+
+    <tr>
+        <td>
+            <!-- Start of adf.ly banner code -->
+            <div style="width: 200%; text-align: center; font-family: verdana; font-size: 10px;"><a href="https://join-adf.ly/24613931"><img border="0" src="https://cdn.adf.ly/images/banners/adfly.468x60.1.gif" width="468" height="60" title="AdF.ly - acorta links y gana dinero!" /></a><br /><a href="https://join-adf.ly/24613931">Gana dinero por compartir tus enlaces!</a></div>
+            <!-- End of adf.ly banner code -->
+        </td>
+    </tr>
+
+</table>
+<br><br><br>
+    </center>  
+</div>
+		  
+
+
+         
+
+
+        <!-- Footer-->
+        <footer style="background-color: #212529;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 65px;
+  color: white;">
+         
+          
+        <center><br>
+            <!-- Start of adf.ly banner code --><!-- <a href="https://join-adf.ly/24613931"><img border="0" src="https://cdn.adf.ly/images/banners/adfly.350x19.1.png" width="350" height="40" title="AdF.ly - acorta links y gana dinero!" /></a> -->
+            <!-- End of adf.ly banner code -->
+                    <!-- <a class="btn btn-dark btn-social mx-2" target="_blank" href="https://twitter.com/lamamadecraig/"><i class="fab fa-twitter"></i></a> -->
+                    <a class="btn btn-dark btn-social mx-2" target="_blank" href="https://www.facebook.com/elchavodelmeme/"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" target="_blank" href="https://elchavodelmeme.blogspot.com/"><i class="fab fa-blogger"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" target="_blank" href="https://www.youtube.com/playlist?list=PLnDvahG1OC_wKzVB5U8kToTHwnPLa41La"><i class="fab fa-youtube"></i></a>
+
+            <!-- Start of adf.ly banner code --><!-- <a href="https://join-adf.ly/24613931"><img border="0" src="https://cdn.adf.ly/images/banners/adfly.350x19.1.png" width="350" height="40" title="AdF.ly - acorta links y gana dinero!" /></a> -->
+            <!-- End of adf.ly banner code -->
+
+              </center>
+    </footer>
+
+   
+   
+
+        <!-- Bootstrap core JS-->
+
+        <script src="../js-app/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="../js-app/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+        <script src="../assets-app/mail/jqBootstrapValidation.js"></script>
+  
+        <!-- Core theme JS-->
+        <script src="../js-app/scripts.js"></script>
+
+        
+
+       
+
+    </body>
+</html>
