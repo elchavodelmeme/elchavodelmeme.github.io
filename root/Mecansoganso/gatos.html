@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>CatGame</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	</head>
+	
+   
+    
+	<style>
+		canvas {
+			border: 1px solid;
+		}
+
+	</style>
+
+
+
+	<body >
+
+        <!--<input type="button" data-dismiss="modal" id="btnRegistroRB" data-toggle="modal" href="#portfolioModal7" class="nav-link" style="display:none" />-->
+
+       
+
+        <!-- Modal 7-->
+        <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog ">
+                <div class="modal-content2">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Formularios -->
+                                    <div class="contenedor-formularios">
+                                        <!-- Links de los formularios -->
+                                        <!--<ul class="contenedor-tabs">
+                                            <a class="item-intro text-muted">Rompiste Récord! Coloca tu nombre en el muro de los Récords y participa para ganar increíbles premios</a>
+                                        </ul>-->
+                                        <!-- Registrarse -->
+                                        <div id="registrarse">
+                                            <h1>Ganaste!</h1>
+
+                                            <form action="#" method="post">
+                                                <div class="fila-arriba">
+                                                    <div class="contenedor-input">
+                                                        <label>
+                                                            Nombre <span class="req">*</span>
+                                                        </label>
+                                                        <input type="text" id="txtN" required>
+                                                    </div>
+
+                                                    <div class="contenedor-input">
+                                                        <label>
+                                                            Apellido <span class="req">*</span>
+                                                        </label>
+                                                        <input type="text" id="txtAp" required>
+                                                    </div>
+                                                </div>
+                                                <div class="contenedor-input">
+                                                    <label>
+                                                        Teléfono <span class="req">*</span>
+                                                    </label>
+                                                    <input type="text" id="txtTel" required>
+                                                </div>
+                                                <div class="contenedor-input">
+                                                    <label>
+                                                        Email <span class="req">*</span>
+                                                    </label>
+                                                    <input type="email" id="txtEm" required>
+                                                </div>
+
+
+                                                <!--<a class="js-scroll-trigger"  href="#team">-->
+
+                                                <button class="btn btn-primary button button-block" data-dismiss="modal" onclick="RecordG()" type="button">
+
+                                                    Listo!
+
+                                                </button>
+                                                <!--</a>-->
+
+
+
+
+                                            </form>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     
+        <br>
+
+     
+        <center>
+     
+           
+            <button id="btnPausar" style="display:none"></button>
+            <button id="btnReiniciar" style="display:none"></button>
+            <button id="btnReproducir" style="display:none"></button>
+		<canvas width="100%" height="50%" id="canvas" onclick="botonsaltar();">
+		</canvas>
+     <!--   <table style="width: 422px">
+            <TR>
+    
+        
+            
+              <center>   
+
+            <div class="wrap"> <input id="btnsaltar" class="button" type="button" name="saltar" value="Saltar" onclick="botonsaltar();" /></TD> 
+         </div></center>	</TR>
+
+        </table>-->
+    </center>
+    
+
+
+
+		  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://unpkg.com/popper.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js'></script>
+
+<script src="script.js"></script>
+      
+        <script src="js/trex4.js"></script>
+
+        
+
+          <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    
+
+        <script>
+
+            function RecordG() {
+                var nombre = document.getElementById("txtN").value;
+                var apellido = document.getElementById("txtAp").value;
+                var tel = document.getElementById("txtTel").value;
+                var email = document.getElementById("txtEm").value;
+                var recG = localStorage.getItem("recG");
+
+                if (nombre != "" && email != "" && tel != "") {
+                    $.ajax({
+                        type: "GET",
+                        url: "../ws/wscraig.ashx?Comando=AgregarRecordsG&Email=" + email + "&Nombre=" + nombre + "&Apellido=" + apellido + "&Telefono=" + tel + "&Record=" + recG,
+                        success: function (result) {
+
+                            alert("Record Agregado");
+                        },
+                        error: function (jqXmlHttpRequest, textStatus, errorThrown) {
+                        }
+                    });
+                }
+                else {
+                    alert("No se guardo bay");
+                }
+            }
+
+            function JuegoSeleccionado(valor) {
+                localStorage.setItem("jselec", valor);
+            }
+
+
+            function guardarRecord() {
+                var j = localStorage.getItem("jselec");
+                if (j == "B") {
+                    RecordB();
+                }
+                if (j == "G") {
+                    RecordG();
+                }
+            }
+
+
+
+
+
+        /*registro de records*/
+        $(document).ready(function () {
+
+            $(".contenedor-formularios").find("input, textarea").on("keyup blur focus", function (e) {
+
+                var $this = $(this),
+                  label = $this.prev("label");
+
+                if (e.type === "keyup") {
+                    if ($this.val() === "") {
+                        label.removeClass("active highlight");
+                    } else {
+                        label.addClass("active highlight");
+                    }
+                } else if (e.type === "blur") {
+                    if ($this.val() === "") {
+                        label.removeClass("active highlight");
+                    } else {
+                        label.removeClass("highlight");
+                    }
+                } else if (e.type === "focus") {
+                    if ($this.val() === "") {
+                        label.removeClass("highlight");
+                    }
+                    else if ($this.val() !== "") {
+                        label.addClass("highlight");
+                    }
+                }
+
+            });
+
+            $(".tab a").on("click", function (e) {
+
+                e.preventDefault();
+
+                $(this).parent().addClass("active");
+                $(this).parent().siblings().removeClass("active");
+
+                target = $(this).attr("href");
+
+                $(".contenido-tab > div").not(target).hide();
+
+                $(target).fadeIn(600);
+
+            });
+
+        });
+
+
+
+
+
+
+
+
+
+        </script>
+
+
+
+
+        
+        <style>
+
+.wrap {
+  height: 100%;
+  display: contents;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+            *, *:before, *:after {
+                box-sizing: border-box;
+            }
+
+            a {
+                text-decoration: none;
+                color: #1ab188;
+                transition: .5s ease;
+            }
+
+            .contenedor-formularios {
+                background: #13232f;
+            }
+
+            .row {
+                background: #13232f;
+            }
+
+            .contenedor-tabs {
+                text-align: center;
+                list-style: none;
+                padding: 0;
+                margin: 0 0 40px 0;
+           
+       
+              
+            }
+
+            li a {
+                display: block;
+                text-decoration: none;
+                padding: 15px;
+                background: #a0b3b0;
+                color: #a0b3b0;
+                font-size: 20px;
+                float: left;
+                width: 100%;
+                text-align: center;
+                cursor: pointer;
+                transition: .5s ease;
+            }
+
+          
+
+            .contenido-tab > div:last-child {
+                display: none;
+            }
+
+
+            h1 {
+                text-align: center;
+                color: #fff;
+                font-weight: 300;
+                margin: 0 0 40px;
+            }
+
+            label {
+                position: absolute;
+                transform: translateY(6px);
+                left: 13px;
+                color: #fff;
+                transition: all 0.25s ease;
+                -webkit-backface-visibility: hidden;
+                pointer-events: none;
+                font-size: 22px;
+            }
+
+            .req {
+                margin: 2px;
+                color: #1ab188;
+            }
+
+
+            label.active {
+                transform: translateY(50px);
+                left: 2px;
+                font-size: 14px;
+            }
+
+            .req {
+                opacity: 0;
+            }
+
+            
+
+            label.highlight {
+                color: #fff;
+            }
+
+            input {
+                font-size: 22px;
+                display: block;
+                width: 100%;
+                height: 100%;
+                padding: 5px 10px;
+                background: #1ab188;
+                background-image: none;
+                border: 1px solid;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                color: #ffffff;
+                border-radius: 0;
+                transition: all 0.5s ease;
+                border-radius: 5px;
+            }
+           
+
+            .contenedor-input {
+                position: relative;
+                margin-bottom: 40px;
+            }
+
+            .fila-arriba {
+               
+
+    
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            div {
+                float: left;
+                width: 48%;
+                margin-right: 4%;
+         
+
+          
+
+            }
+       
+
+            .button {
+                border: 0;
+                outline: none;
+                border-radius: 5px;
+                cursor: pointer;
+                padding: 15px 0;
+                font-size: 2rem;
+                color: #fff;
+                background: #1ab188;
+                transition: all .5s ease;
+                -webkit-appearance: none;
+         
+
+            
+                background: transparent;
+                border-color: #007bff;
+                color: #007bff;
+            }
+
+            
+
+            .button-block {
+                display: compact;
+                width: 100%;
+            }
+
+            .forgot {
+                margin-top: -20px;
+                text-align: right;
+                margin-bottom: 20px;
+            }
+
+            @media screen and (max-width: 500px) {
+                .fila-arriba {
+                
+
+            
+                width: 100%;
+        
+
+            
+                margin-bottom: 40px;
+            
+
+            
+            }
+            }
+
+            @media screen and (max-width: 400px) {
+                .contenedor-tabs {
+                
+
+            
+                width: 100%;
+            
+
+            }
+            }
+
+            /*style de registro de record*/
+
+            .modal-content2 {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                pointer-events: auto;
+                background-clip: padding-box;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                border-radius: 0.3rem;
+                outline: 0;
+                background-color: transparent;
+                margin-top: 0rem;
+            }
+
+            .auto-style1 {
+                display: block;
+                width: 100%;
+                height: 100px;
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.5;
+                color: #495057;
+                background-clip: padding-box;
+                border-radius: 0.25rem;
+                transition: none;
+                border: 1px solid #ced4da;
+                background-color: #fff;
+            }
+
+            .iframe {
+                position: relative;
+            }
+
+            .iframe-wrap::after {
+                content: "";
+                display: block;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        </style>
+
+	</body>
+</html>

@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Doña Letty</title>
+      
+            
+     <!-- Anuncios 
+     <script type="text/javascript">
+      var adfly_id = 24613931;
+      var popunder_frequency_delay = 0;
+      var adfly_google_compliant = false;
+  </script>
+  <script src="https://cdn.adf.ly/js/display.js"></script>
+       
+-->
+        <style type="text/css">
+                #popup {
+        background-color: rgba(0,0,0,0.8);
+        position: fixed;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        margin:0;
+        -webkit-animation:autopopup 2s;
+        -moz-animation:autopopup 2s;
+        animation:autopopup 4s;
+    }
+        @-webkit-keyframes autopopup {
+            from {opacity: 0;margin-top:-200px;}
+            to {opacity: 1;}
+        }
+        @-moz-keyframes autopopup {
+            from {opacity: 0;margin-top:-200px;}
+            to {opacity: 1;}
+        }
+        @keyframes autopopup {
+            from {opacity: 0;margin-top:-200px;}
+            to {opacity: 1;}
+        }
+
+    #popup:target {
+        -webkit-transition:all 100s;
+        -moz-transition:all 100s;
+        transition:all 100s;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+
+
+
+.bb, .bb::before, .bb::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.bb {
+  width: 210px;
+  height: 320px;
+  margin: auto;
+  background: url("img/Doña.png") no-repeat 100%/100% rgba(0, 0, 0, 0.1);
+  color: #d1b72f;
+  box-shadow: inset 0 0 0 1px rgba(198 202 98 / 50%);
+}
+.bb::before, .bb::after {
+  content: '';
+  z-index: -1;
+  margin: -5%;
+  box-shadow: inset 0 0 0 2px;
+  animation: clipMe 8s linear infinite;
+}
+.bb::before {
+  animation-delay: -4s;
+}
+.bb:hover::after, .bb:hover::before {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+@keyframes clipMe {
+  0%, 100% {
+    clip: rect(0px, 220px, 2px, 0px);
+  }
+  25% {
+    clip: rect(0px, 2px, 420px, 0px);
+  }
+  50% {
+    clip: rect(218px, 220px, 420px, 0px);
+  }
+  75% {
+    clip: rect(0px, 420px, 420px, 218px);
+  }
+}
+html,
+body {
+  height: 100%;
+  background: url("img/fondo advertencia.png") no-repeat 100%/100% rgba(0, 0, 0, 0.1);
+}
+
+h5{
+    font-family: arial;
+    font-size: small;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+        </style>
+
+        <script src="js-app/jquery.min.js"></script>
+     <script>
+
+       
+                setTimeout(function() {
+
+         $('#loading').fadeOut('fast');
+         document.getElementById("popup").style.display = 'none';
+        
+        
+         window.location.href = "indexini.html";
+        }, 10000); // <-- time in milliseconds
+        
+           
+
+        function ir(){
+          window.location.href = "index1.html";
+        }
+
+        function ini(){
+            
+            document.getElementById("popup").style.display = 'block';
+            document.getElementById("loading").style.display = 'block';
+         
+        }
+        
+     </script>
+    </head>
+    <body id="page-top" onload="ini()" style="background-color: #0f222b">
+
+       <div class="modal-wrapper" id="popup" style="display:none;">
+               <div id="loading" class="bb" style="display:none;" ></div>
+       </div>  
+   
+           
+
+    </body>
+</html>
